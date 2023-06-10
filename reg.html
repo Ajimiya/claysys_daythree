@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="tex/css" href="style.css">
+    <title>Registration</title>
+    
+ <!-- ONFOCUSOUT -->
+
+ <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+<script>
+  $(document).ready(function () {
+      $("div").focusin(function () {
+          $(this).css("background-color", "pink");
+      });
+      $("div").focusout(function () {
+          $(this).css("background-color", "#FFFFFF");
+      });
+  });
+  </script>
+
+   <!-- ONFOCUSOUT -->
+
+    <style>
+ textarea{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+}
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-light  static-top" style="background-color: #8bf0e7;">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="https://www.claysys.com/app/themes/claysys-2019/assets/images/claysys-logo.png" alt="..." height="55">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html"><b>HOME</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html"><b>ABOUT US</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="login.html"><b>SIGN IN</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="reg.html"><b>SIGN UP</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contact.html"><b>CONTACT US</b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav><br><br>
+      <form id="regform" onsubmit="validateForms(event)">
+      <section class="h-100 bg-dark">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card card-registration my-4">
+                <div class="row g-0">
+                  <div class="col-xl-6 d-none d-xl-block">
+                    <img src="https://www.cfosimplified.com/wp-content/uploads/2020/05/operational-eff1-geotagged.jpg"
+                      alt="Sample photo" class="img-fluid"
+                      style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height: 100%;" />
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="card-body p-md-5 text-black">
+                      <h3 class="mb-5 text-uppercase"><b>REGISTRATION FORM</b></h3>
+      
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="firstname" class="form-control form-control-lg" />
+                            <label class="form-label" for="firstname">First name</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="lastname" class="form-control form-control-lg" />
+                            <label class="form-label" for="lastname">Last name</label>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="date" id="dob" class="form-control form-control-lg" />
+                            <label class="form-label" for="dob">Date of birth</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="number" id="age" class="form-control form-control-lg" />
+                            <label class="form-label" for="age">Age</label>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+      
+                        <h6 class="mb-0 me-4">Gender: </h6>
+      
+                        <div class="form-check form-check-inline mb-0 me-4">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                            value="option1" />
+                          <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline mb-0 me-4">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                            value="option2" />
+                          <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline mb-0">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                            value="option3" />
+                          <label class="form-check-label" for="otherGender">Other</label>
+                        </div>
+      
+                      </div>
+                      <div class="form-outline mb-4">
+                        <input type="number" id="phoneNumber" class="form-control form-control-lg" />
+                        <label class="form-label" for="phoneNumber">Phone number</label>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <input type="text" id="email" class="form-control form-control-lg" />
+                        <label class="form-label" for="email">Email address</label>
+                      </div>
+                      
+                      <div>
+                        <label>
+                            <br>
+                            Address:
+                        </label>
+                        <textarea placeholder="Enter your address"></textarea>
+                    </div>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+      
+                          <select class="select">
+                            <option value="1">State</option>
+                            <option value="2">KERALA</option>
+                            <option value="3">TAMILNADU</option>
+                            <option value="4">GOA</option>
+                          </select>
+      
+                        </div>
+                        <div class="col-md-6 mb-4">
+      
+                          <select class="select">
+                            <option value="1">City</option>
+                            <option value="2">KOCHI</option>
+                            <option value="3">COIMBATORE</option>
+                            <option value="4">PANAJI</option>
+                          </select>
+      
+                        </div>
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <input type="text" id="username" class="form-control form-control-lg" />
+                        <label class="form-label" for="username">Username</label>
+                      </div>
+      
+                      
+                      <div class="form-outline mb-4">
+                        <input type="password" id="password" class="form-control form-control-lg" />
+                        <label class="form-label" for="password">Password</label>
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <input type="password" id="confirmPassword" class="form-control form-control-lg" />
+                        <label class="form-label" for="confirmPassword">Confirm Password</label>
+                      </div>
+      
+                      <div class="d-flex justify-content-end pt-3">
+                        <button type="button" class="btn btn-warning btn-lg ms-2" style="background-color: rgb(226, 43, 226);"><a href="home.html">Submit form</a></button>
+                      </div>
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+    <script src="script1.js"></script><br><br>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="bg-dark text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4">
+              <!-- Section: Social media -->
+              <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+          
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+          
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-google"></i
+                ></a>
+          
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+          
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+          
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </section>
+              <section class="">
+                <form action="">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-auto">
+                      <p class="pt-2">
+                        <strong>Sign up for our newsletter</strong>
+                      </p>
+                    </div>
+                    <div class="col-md-5 col-12">
+                      <div class="form-outline form-white mb-4">
+                        <input type="email" id="form5Example21" class="form-control" />
+                        <label class="form-label" for="form5Example21">Email address</label>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button type="submit" class="btn btn-outline-light mb-4">
+                        Subscribe
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </section>
+              <section class="mb-4">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                  repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                  eum harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+              </section>
+              <!-- Section: Text -->
+                  <!--Grid column-->
+                  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+          
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a href="home.html" class="text-white">Home</a>
+                      </li>
+                      <li>
+                        <a href="about.html" class="text-white">About Us</a>
+                      </li>
+                      <li>
+                        <a href="login.html"class="text-white">Sign In</a>
+                      </li>
+                      <li>
+                        <a href="reg.html" class="text-white">Sign Up</a>
+                      </li>
+                      <li>
+                        <a href="contact.html" class="text-white">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              
+            </div>
+          
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2023 Copyright:
+              <a class="text-white" href="https://mdbootstrap.com/">ajimiya@gmail.com</a>
+            </div>
+            <!-- Copyright -->
+          </footer> 
+    
+    
+          <!-- FOOTER -->
+</body>
+</html>
